@@ -21,6 +21,20 @@ Route::get('/home', function () {
     return view('home');
 })->middleware(['auth'])->name('home');
 
+
+Route::get('/about', function () {
+    return view('blog.about');
+})->name('about');
+
+Route::get('/blog', function () {
+    return view('blog.blog');
+})->name('blog');
+
+Route::get('/detail', function () {
+    return view('blog.detail');
+})->name('detail');
+
+
 require __DIR__.'/auth.php';
 
 

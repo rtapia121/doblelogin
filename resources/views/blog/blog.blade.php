@@ -12,13 +12,13 @@
     <title>Stand Blog Posts</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('blogtheme/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-stand-blog.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="{{asset('blogtheme/assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{asset('blogtheme/assets/css/templatemo-stand-blog.css')}}">
+    <link rel="stylesheet" href="{{asset('blogtheme/assets/css/owl.css')}}">
 <!--
 
 TemplateMo 551 Stand Blog
@@ -37,42 +37,11 @@ https://templatemo.com/tm-551-stand-blog
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Stand Blog<em>.</em></h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="blog.html">Blog Entries</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="post-details.html">Post Details</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
+    @include('layouts.blog.header')
     <!-- Page Content -->
     <!-- Banner Starts Here -->
     <div class="heading-page header-text">
@@ -89,7 +58,7 @@ https://templatemo.com/tm-551-stand-blog
         </div>
       </section>
     </div>
-    
+
     <!-- Banner Ends Here -->
 
     <section class="call-to-action">
@@ -124,7 +93,7 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-01.jpg" alt="">
+                      <img src="{{asset('blogtheme/assets/images/blog-thumb-01.jpg')}}" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -152,7 +121,7 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-02.jpg" alt="">
+                      <img src="{{asset('blogtheme/assets/images/blog-thumb-02.jpg')}}" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -180,7 +149,7 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-03.jpg" alt="">
+                      <img src="{{asset('blogtheme/assets/images/blog-thumb-03.jpg')}}" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -208,7 +177,7 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-04.jpg" alt="">
+                      <img src="{{asset('blogtheme/assets/images/blog-thumb-04.jpg')}}" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -236,7 +205,7 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-05.jpg" alt="">
+                      <img src="{{asset('blogtheme/assets/images/blog-thumb-05.jpg')}}" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -264,7 +233,7 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-06.jpg" alt="">
+                      <img src="{{asset('blogtheme/assets/images/blog-thumb-06.jpg')}}" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -375,43 +344,22 @@ https://templatemo.com/tm-551-stand-blog
       </div>
     </section>
 
-    
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="social-icons">
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Behance</a></li>
-              <li><a href="#">Linkedin</a></li>
-              <li><a href="#">Dribbble</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-12">
-            <div class="copyright-text">
-              <p>Copyright 2020 Stand Blog Co.
-                    
-                 | Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">TemplateMo</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+
+    @include('layouts.blog.footer')
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('blogtheme/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('blogtheme/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/accordions.js"></script>
+    <script src="{{asset('blogtheme/assets/js/custom.js')}}"></script>
+    <script src="{{asset('blogtheme/assets/js/owl.js')}}"></script>
+    <script src="{{asset('blogtheme/assets/js/slick.js')}}"></script>
+    <script src="{{asset('blogtheme/assets/js/isotope.js')}}"></script>
+    <script src="{{asset('blogtheme/assets/js/accordions.js')}}"></script>
 
-    <script language = "text/Javascript"> 
+    <script language = "text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
       function clearField(t){                   //declaring the array outside of the
       if(! cleared[t.id]){                      // function makes it static and global
