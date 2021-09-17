@@ -41,7 +41,7 @@ https://templatemo.com/tm-551-stand-blog
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
-    @include('layouts.blog.header')
+    @include('layouts.blog.components.header')
     <!-- Page Content -->
     <!-- Banner Starts Here -->
     <div class="heading-page header-text">
@@ -345,7 +345,7 @@ https://templatemo.com/tm-551-stand-blog
     </section>
 
 
-    @include('layouts.blog.footer')
+    @include('layouts.blog.components.footer')
 
 
     <!-- Bootstrap core JavaScript -->
