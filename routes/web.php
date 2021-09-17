@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-})->middleware(['auth'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('/about', function () {
@@ -61,5 +60,21 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         Route::post('/profile',                                     'ProfileController@updateProfile')->name('update-profile');
         Route::get('/password',                                     'ProfileController@editPassword')->name('edit-password');
         Route::post('/password',                                    'ProfileController@updatePassword')->name('update-password');
+    });
+});
+
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('posts')->name('posts/')->group(static function() {
+            Route::get('/',                                             'PostController@index')->name('index');
+            Route::get('/create',                                       'PostController@create')->name('create');
+            Route::post('/',                                            'PostController@store')->name('store');
+            Route::get('/{post}/edit',                                  'PostController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'PostController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{post}',                                      'PostController@update')->name('update');
+            Route::delete('/{post}',                                    'PostController@destroy')->name('destroy');
+        });
     });
 });
