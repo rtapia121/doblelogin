@@ -51,5 +51,57 @@ return [
         ],
     ],
 
+    'blog' => [
+        'title' => 'Blog',
+
+        'actions' => [
+            'index' => 'Blog',
+            'create' => 'New Blog',
+            'edit' => 'Edit :name',
+            'will_be_published' => 'Post will be published at',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'title' => 'Title',
+            'content' => 'Content',
+            'published_at' => 'Published at',
+            'description' => 'Description',
+            'url_cover_img' => 'Image'
+
+        ],
+    ],
+    'category' => [
+        'title' => 'Categories',
+
+        'actions' => [
+            'index' => 'Category',
+            'create' => 'New Category',
+            'edit' => 'Edit :name',
+            // 'will_be_published' => 'Post will be published at',
+        ],
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+        ],
+    ],
+
+    'tag' => [
+        'title' => 'Tags',
+
+        'actions' => [
+            'index' => 'Tags',
+            'create' => 'New Tag',
+            'edit' => 'Edit :name',
+            // 'will_be_published' => 'Post will be published at',
+        ],
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+        ],
+    ],
+
+
+
     // Do not delete me :) I'm used for auto-generation
 ];

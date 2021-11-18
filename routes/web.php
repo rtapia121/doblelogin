@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\Admin\TagsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,6 +76,52 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
             Route::post('/bulk-destroy',                                'PostController@bulkDestroy')->name('bulk-destroy');
             Route::post('/{post}',                                      'PostController@update')->name('update');
             Route::delete('/{post}',                                    'PostController@destroy')->name('destroy');
+        });
+    });
+});
+
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('blogs')->name('blogs/')->group(static function() {
+            Route::get('/',                                             'BlogController@index')->name('index');
+            Route::get('/create',                                       'BlogController@create')->name('create');
+            Route::post('/',                                            'BlogController@store')->name('store');
+            Route::get('/{blog}/edit',                                  'BlogController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'BlogController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{blog}',                                      'BlogController@update')->name('update');
+            Route::delete('/{blog}',                                    'BlogController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('categories')->name('categories/')->group(static function() {
+            Route::get('/',                                             'CategoriesController@index')->name('index');
+            Route::get('/create',                                       'CategoriesController@create')->name('create');
+            Route::post('/',                                            'CategoriesController@store')->name('store');
+            Route::get('/{category}/edit',                              'CategoriesController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'CategoriesController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{category}',                                  'CategoriesController@update')->name('update');
+            Route::delete('/{category}',                                'CategoriesController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('tags')->name('tags/')->group(static function() {
+            Route::get('/',                                             'TagsController@index')->name('index');
+            Route::get('/create',                                       'TagsController@create')->name('create');
+            Route::post('/',                                            'TagsController@store')->name('store');
+            Route::get('/{tag}/edit',                                   'TagsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'TagsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{tag}',                                       'TagsController@update')->name('update');
+            Route::delete('/{tag}',                                     'TagsController@destroy')->name('destroy');
         });
     });
 });

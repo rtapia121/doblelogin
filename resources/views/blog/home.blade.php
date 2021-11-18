@@ -191,7 +191,7 @@ https://templatemo.com/tm-551-stand-blog
                             <a href="post-details.html"><h4>{{$art->title}}</h4></a>
                             <ul class="post-info">
                               <li><a href="#">Admin</a></li>
-                              <li><a href="#">{{$art->published_at}}</a></li>
+                              <li><a href="#">{{$art->post_date}}</a></li>
                               <li><a href="#">12 Comments</a></li>
                             </ul>
                             <p>Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">Contact TemplateMo</a> for more info. Thank you.</p>
@@ -245,7 +245,6 @@ https://templatemo.com/tm-551-stand-blog
                     <div class="content">
                         <ul>
                         @foreach ($lstArt as $art)
-
                         <li><a href="post-details.html">
                             <h5>{{$art->title}}</h5>
                             <span>{{$art->published_at}}</span>
@@ -263,12 +262,9 @@ https://templatemo.com/tm-551-stand-blog
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="#">- Nature Lifestyle</a></li>
-                        <li><a href="#">- Awesome Layouts</a></li>
-                        <li><a href="#">- Creative Ideas</a></li>
-                        <li><a href="#">- Responsive Templates</a></li>
-                        <li><a href="#">- HTML5 / CSS3 Templates</a></li>
-                        <li><a href="#">- Creative &amp; Unique</a></li>
+                          @foreach ($lstcategories as $category )
+                            <li><a href="#">{{$category->name}}</a></li>
+                          @endforeach
                       </ul>
                     </div>
                   </div>
